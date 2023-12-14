@@ -44,9 +44,13 @@ button{
     width:10%;
 }
 
+.task-container{
+    display: flex;
+    flex-direction: row;
+}
+
 .task-list{
     background-color: aquamarine;
     display: flex;
-    
-
+    width: 200px;
 }

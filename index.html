@@ -25,28 +25,27 @@
       </header>
       <div class="add-task">
         <input type="text" id="task-input" name="taskInput">
+        <!-- <label for="taskTime">Select Time:</label> -->
+       <input type="time" id="taskTime">
+
         <button>Add Task</button>
       </div>
-      <ul id="task-list">
-      </ul>
+      <div class='task-container'>
+        <ul id="task-list">
+        </ul>
+        <ul id="task-time-list">
+        </ul>
+      </div>
+      
     </div>
 
     <!-- this is the rightest timestable section -->
     <div class="timeline"></div>
     <table>
       <thead>
-          <tr>
-              <th>Time</th>
-              <th>Task</th>
-          </tr>
       </thead>
       <tbody>
           <!-- 24 slots for a day (add in js file) -->
-          <tr>
-              <td>09:00 AM - 09:30 AM</td>
-              <td>Meeting</td>
-          </tr>
-          
       </tbody>
   </table>
    </div>
