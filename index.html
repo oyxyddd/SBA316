@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Today's Tasks</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="timeline.css">
   <script defer src="index.js"></script>
+  <script defer src="timeline.js"></script>
 </head>
 <body>
   <div class="main-container">
@@ -29,8 +31,24 @@
       </ul>
     </div>
 
-
+    <!-- this is the rightest timestable section -->
     <div class="timeline"></div>
-  </div>
+    <table>
+      <thead>
+          <tr>
+              <th>Time</th>
+              <th>Task</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- 24 slots for a day (add in js file) -->
+          <tr>
+              <td>09:00 AM - 09:30 AM</td>
+              <td>Meeting</td>
+          </tr>
+          
+      </tbody>
+  </table>
+   </div>
 </body>
 </html>
