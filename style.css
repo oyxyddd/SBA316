@@ -52,5 +52,14 @@ button{
 .task-list{
     background-color: aquamarine;
     display: flex;
-    width: 200px;
+    flex-direction: column;
+    width: 70%;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.task-time-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }

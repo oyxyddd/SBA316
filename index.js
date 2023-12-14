@@ -2,14 +2,16 @@
 const addButton = document.querySelector("button");
 console.log(addButton)
 const taskInput = document.getElementById("task-input");
-const taskList = document.getElementById("task-list");
-const taskTimeList = document.getElementById("task-time-list"); 
+const taskList = document.querySelector(".task-list");
+const taskTimeList = document.querySelector(".task-time-list"); 
 const timeInput = document.getElementById("taskTime");
+const allTasks = document.querySelectorAll(".task-list li");
 
 //Add event listener 
 addButton.addEventListener("click",addTask);
 
 //Functions Section 
+// This function take input task and put it in the task list with a checkbox before eachtask
 function addTask(event){
     const taskContent = taskInput.value.trim();
     const taskTime = timeInput.value;
@@ -18,11 +20,11 @@ function addTask(event){
         taskInput.focus();
         return;
     }else{
-        taskList.appendChild(document.createElement("li")).textContent = taskContent;
+        const taskHTML = `<input type="checkbox"><label>${taskContent}</label>`
+        taskList.appendChild(document.createElement("li")).innerHTML = taskHTML;
         taskTimeList.appendChild(document.createElement("li")).textContent = taskTime;
         taskInput.value = "";
-        taskInput.focuse();
+        timeInput.value = "";
+        taskInput.focus();
     }
-
-
 }
