@@ -63,3 +63,7 @@ button{
     display: flex;
     flex-direction: column;
 }
+
+.completed {
+    text-decoration: line-through;
+}

@@ -27,4 +27,22 @@ function addTask(event){
         timeInput.value = "";
         taskInput.focus();
     }
+
+    const allTasks = document.querySelectorAll(".task-list li");
+    allTasks.forEach((task) =>{task.addEventListener('change',function(){
+        const listItem = task.lastChild;
+        const listCheck = task.firstChild;
+        console.log(listItem.c);
+        console.log(listCheck)
+        if (listCheck.checked){
+            listItem.classList.add("completed");
+        }else{
+            listItem.classList.remove("completed") ;
+        }
+    })
+    })
+
+    // console.log(allTasks)
+    
+
 }
