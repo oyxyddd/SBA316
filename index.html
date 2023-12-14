@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Today's Tasks</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
 </head>
 <body>
   <div class="main-container">
@@ -13,16 +15,21 @@
       <div>Tomorrow</div>
       <div>Inbox</div>
     </nav>
+    <!-- this is the Middle section on the webpage where you can add tasks and shows all tasks. -->
     <div class="tasks">
       <header>
         <div>Today</div>
         <div class="date"></div>
       </header>
-      <input>
-      <button>Add</button>
-      <ul class="task-list">
+      <div class="add-task">
+        <input type="text" id="task-input" name="taskInput">
+        <button>Add Task</button>
+      </div>
+      <ul id="task-list">
       </ul>
     </div>
+
+
     <div class="timeline"></div>
   </div>
 </body>

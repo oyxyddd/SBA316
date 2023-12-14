@@ -1,0 +1,52 @@
+body{
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-size: 18px;
+    background-color: #f8f9fa;
+}
+.main-container{
+    display: flex;
+}
+
+nav{
+    width: 15%;
+}
+
+/* For middle task section  */
+.tasks{
+    border:2px solid plum;
+    width: 40%;
+    height:100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: pink;
+    font-size: 2rem;
+    padding: 0px 0px 30px 0px;
+}
+
+.add-task{
+    border:2px solid rgb(160, 221, 167);
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;;
+}
+
+#task-input{
+    margin-right: 15px;
+    width:50%;
+}
+
+button{
+    width:10%;
+}
+
+.task-list{
+    background-color: aquamarine;
+    display: flex;
+    
+
+}
