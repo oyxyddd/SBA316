@@ -13,7 +13,6 @@ addButton.addEventListener("click",addTask);
 function addTask(event){
     const taskContent = taskInput.value.trim();
     let taskTime = timeInput.value;
-    console.log(taskTime)
 
     if (taskContent == ''){
         taskInput.focus();
@@ -36,9 +35,12 @@ function addTask(event){
 
     const allTasks = document.querySelectorAll(".task-list li");
     allTasks.forEach((task) => {task.addEventListener('change',function(){
-        const listItem = task.lastChild;
-        const listCheck = task.firstChild;
-    
+        const listCheck = task.firstElementChild;
+        const listItem = listCheck.nextElementSibling;
+        
+        console.log(listItem);
+        console.log(listCheck);
+
         if (listCheck.checked){
             listItem.classList.add("completed");
             task.classList.add('completed-task')
