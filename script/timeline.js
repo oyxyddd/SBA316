@@ -9,6 +9,7 @@ let Minute = startTime.getMinutes();
 for (let i = 0; i < 20; i++){
     const tableRow = tableBody.appendChild(document.createElement("tr"));
     const timeTd = tableRow.appendChild(document.createElement("td"));
+    
 
     const formattedStart = `${Hour.toString().padStart(2, '0')}:${Minute.toString().padStart(2, '0')}`;
     Minute += 30;

@@ -1,4 +1,4 @@
- # Readme File 
+Readme File 
 
  This is a sigle page web application for managing today's tasks.
 
@@ -10,3 +10,4 @@
 
  Functions in developing:
  - once a task is entered, put the task in the timetable on the rightest section of the page
+ - drag task form task list to the time column to arrange tasks
