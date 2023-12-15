@@ -10,18 +10,20 @@
   <link rel="stylesheet" href="login.css">
   <script defer src="index.js"></script>
   <script defer src="timeline.js"></script>
+  <script defer src="login.js"></script>
 </head>
 <body>
   <div class="main-container">
    <!-- This is the leftest part for the user to sign in  -->
     <div class="leftside-login">
-      <form class="login">
+      <form id="login">
         <div>Welcome</div>
         <input name="email" type="email" placeholder="Email">
         <input name="password" type="text" placeholder="Password">
         <button class="login-button">Log in</button>
       </form>
     </div>
+
     <!-- this is the Middle section on the webpage where you can add tasks and shows all tasks. -->
     <div class="tasks">
       <header>
@@ -30,10 +32,8 @@
       </header>
       <div class="add-task">
         <input type="text" id="task-input" name="taskInput">
-        <!-- <label for="taskTime">Select Time:</label> -->
-       <input type="time" id="taskTime">
-
-        <button>Add Task</button>
+        <input type="time" id="taskTime" required>
+        <button class="add-button">Add Task</button>
       </div>
       <div class='task-container'>
         <ul class="task-list">

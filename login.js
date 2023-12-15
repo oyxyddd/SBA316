@@ -1,14 +1,14 @@
 //cache the elements
 const loginForm = document.getElementById("login");
-const email = regForm.elements["email"];
-const password = regForm.elements["password"];
+const email = loginForm.elements["email"];
+const password = loginForm.elements["password"];
 
 // Add evnt Listener
-regForm.addEventListener("submit", vaidateRegForm);
+loginForm.addEventListener("submit", vaidateLoginForm);
 
 
 //functions for validation the login information
-function vaidateRegForm(evt) {
+function vaidateLoginForm(evt) {
   const pwVal = validatePassword();
   if (pwVal === false) {
     evt.returnValue = false;
@@ -22,4 +22,5 @@ function validatePassword() {
     password.focus();
     return false;
   }
+  return password.value;
 }

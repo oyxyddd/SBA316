@@ -1,5 +1,5 @@
 // Cache the element 
-const addButton = document.querySelector("button");
+const addButton = document.querySelector(".add-button");
 const taskInput = document.getElementById("task-input");
 const taskList = document.querySelector(".task-list");
 const taskTimeList = document.querySelector(".task-time-list"); 
@@ -13,6 +13,7 @@ addButton.addEventListener("click",addTask);
 function addTask(event){
     const taskContent = taskInput.value.trim();
     const taskTime = timeInput.value;
+    console.log(taskTime)
 
     if (taskContent == ''){
         taskInput.focus();
@@ -20,12 +21,11 @@ function addTask(event){
     }else{
         const taskHTML = `<input type="checkbox"><label>${taskContent}</label>`
         taskList.appendChild(document.createElement("li")).innerHTML = taskHTML;
-        taskTimeList.appendChild(document.createElement("li")).textContent = taskTime;
+       taskTimeList.appendChild(document.createElement("li")).textContent = taskTime;
         taskInput.value = "";
         timeInput.value = "";
         taskInput.focus();
         // sort list according to their time 
-    
     }
 
     const allTasks = document.querySelectorAll(".task-list li");
@@ -44,11 +44,8 @@ function addTask(event){
         const completedTasks = taskList.querySelectorAll(".completed-task");
         completedTasks.forEach(task => {
             taskList.appendChild(task);
-        });
+        })
     })
-    })
-
-    // console.log(allTasks)
-
+    });
 
 }
