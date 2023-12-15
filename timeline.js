@@ -18,8 +18,6 @@ for (let i = 0; i < 20; i++){
     }
     const formattedEnd = `${Hour.toString().padStart(2, '0')}:${Minute.toString().padStart(2, '0')}`;
 
-    console.log(`${formattedStart} - ${formattedEnd}`)
-
     timeTd.textContent = `${formattedStart} - ${formattedEnd}`;
 
 

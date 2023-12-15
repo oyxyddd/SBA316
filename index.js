@@ -1,11 +1,9 @@
 // Cache the element 
 const addButton = document.querySelector("button");
-console.log(addButton)
 const taskInput = document.getElementById("task-input");
 const taskList = document.querySelector(".task-list");
 const taskTimeList = document.querySelector(".task-time-list"); 
 const timeInput = document.getElementById("taskTime");
-const allTasks = document.querySelectorAll(".task-list li");
 
 //Add event listener 
 addButton.addEventListener("click",addTask);
@@ -26,23 +24,31 @@ function addTask(event){
         taskInput.value = "";
         timeInput.value = "";
         taskInput.focus();
+        // sort list according to their time 
+    
     }
 
     const allTasks = document.querySelectorAll(".task-list li");
-    allTasks.forEach((task) =>{task.addEventListener('change',function(){
+    allTasks.forEach((task) => {task.addEventListener('change',function(){
         const listItem = task.lastChild;
         const listCheck = task.firstChild;
-        console.log(listItem.c);
-        console.log(listCheck)
+    
         if (listCheck.checked){
             listItem.classList.add("completed");
+            task.classList.add('completed-task')
         }else{
             listItem.classList.remove("completed") ;
         }
+
+        //put completed list to the end of the list 
+        const completedTasks = taskList.querySelectorAll(".completed-task");
+        completedTasks.forEach(task => {
+            taskList.appendChild(task);
+        });
     })
     })
 
     // console.log(allTasks)
-    
+
 
 }

@@ -7,16 +7,21 @@
   <title>Today's Tasks</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="timeline.css">
+  <link rel="stylesheet" href="login.css">
   <script defer src="index.js"></script>
   <script defer src="timeline.js"></script>
 </head>
 <body>
   <div class="main-container">
-    <nav class="leftside-navbar">
-      <div>Today</div>
-      <div>Tomorrow</div>
-      <div>Inbox</div>
-    </nav>
+   <!-- This is the leftest part for the user to sign in  -->
+    <div class="leftside-login">
+      <form class="login">
+        <div>Welcome</div>
+        <input name="email" type="email" placeholder="Email">
+        <input name="password" type="text" placeholder="Password">
+        <button class="login-button">Log in</button>
+      </form>
+    </div>
     <!-- this is the Middle section on the webpage where you can add tasks and shows all tasks. -->
     <div class="tasks">
       <header>
